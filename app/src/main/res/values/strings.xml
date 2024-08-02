@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">Ghost Barber</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="carousel_desc">Carousel of images showcasing features</string>
+    <string name="logo_desc">Company Logo</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="default_web_client_id">829822058781-umc2t6qqgj6ktcr8v9212iu1gsuj7gas.apps.googleusercontent.com</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="transparent_image1_desc">Transparent Image 1 Desc</string>
+    <string name="transparent_image2_desc">Transparent Image 2 Desc</string>
+    <string name="deposit">Deposit</string>
+    <string name="ai_hairstyle_desc">AI Hairstyle</string>
+    <string name="booking_desc">Booking</string>
+    <string name="barbershop_desc">Barbershop</string>
+    <string name="barberman_desc">Barberman</string>
+    <string name="shop_desc">Shop</string>
+    <string name="rent_desc">Rent</string>
+    <string name="academy_desc">Academy</string>
+    <string name="tips_desc">Tips</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="barberman_panel">Barberman Panel</string>
+
+
+    <string name="seller_panel">Seller Panel</string>
+    <string name="register_become_seller">Register to Become a Seller</string>
+
+    <string name="register_become_barber">Register to Become a Barber</string>
+    <string name="hairstyle_image">Hairstyle Image</string>
+    <string name="selected_image">Selected Image</string>
+    <string name="select_image">Select Image</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="change_hairstyle">Change Hairstyle</string>
+    <string name="download_image">Download Image</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="processing_image">PROCESSING THE IMAGE, PLEASE WAIT!</string>
+    <string name="search">Search</string>
+    <string name="balance">Balance</string>
+    <string name="wallet">Wallet</string>
+    <string name="bonus">Bonus</string>
+    <string name="change_your_hairstyle">CHANGE YOUR HAIRSTYLE</string>
+    <string name="pick_hair_color">Pick Hair Color</string>
+    <string name="google_logo">Google Logo</string>
+    <string name="home">Home</string>
+    <string name="notifications">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="reels">Reels</string>
+    <string name="cart">Cart</string>
+    <string name="message">Message</string>
+    <string name="search_icon">Search</string>
+    <string name="more">More</string>
+    <string name="ai_hairstyle">AI Hairstyle</string>
+    <string name="ic_booking">Booking</string>
+    <string name="notification">Notification</string>
+    <string name="plus">Plus</string>
+    <string name="play_video">Play Video</string>
+
+    <string name="likes_count">Likes: %d</string>
+    <string name="comments_count">Comments: %d</string>
+    <string name="add_comment">Add a comment</string>
+    <string name="write_comment">Write a comment...</string>
+    <string name="post">Post</string>
+    <string name="cancel">Cancel</string>
+    <string name="post_comment">Post Comment</string>
+    <string name="back">Back</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="user_settings">User Settings</string>
+    <string name="games">Games</string>
+    <string name="google_sign_in">Google Sign In</string>
+    <string name="add_image">Add Image</string>
+    <string name="add_video">Add Video</string>
+    <string name="capture_video">Capture Video</string>
+    <string name="save" />
+    <string name="change_profile_picture">Change Profile Picture</string>
+    <string name="logout">Logout</string>
+    <string name="barbershop1store">Barbershop 1</string>
+    <string name="academy_4">Academy 4</string>
+    <string name="academy_3">Academy 3</string>
+    <string name="academy_2">Academy 2</string>
+    <string name="academy_1">Academy 1</string>
+    <string name="tips_1">Tips 1</string>
+    <string name="tips_2">Tips 2</string>
+    <string name="tips_3">Tips 3</string>
+
+
+    <!-- Array of Hairstyles -->
+    <string-array name="hairstyles_array">
+        <item>BuzzCut</item>
+        <item>UnderCut</item>
+        <item>Pompadour</item>
+        <item>SlickBack</item>
+        <item>CurlyShag</item>
+        <item>WavyShag</item>
+        <item>FauxHawk</item>
+        <item>Spiky</item>
+        <item>CombOver</item>
+        <item>HighTightFade</item>
+        <item>ManBun</item>
+        <item>Afro</item>
+        <item>LowFade</item>
+        <item>UndercutLongHair</item>
+        <item>TwoBlockHaircut</item>
+        <item>TexturedFringe</item>
+        <item>BluntBowlCut</item>
+        <item>LongWavyCurtainBangs</item>
+        <item>MessyTousled</item>
+        <item>MediumLengthWavy</item>
+        <item>CornrowBraids</item>
+        <item>LongHairTiedUp</item>
+        <item>Middle-parted</item>
+    </string-array>
+
+    <!-- Array of Colors -->
+    <string-array name="colors_array">
+        <item>blonde</item>
+        <item>platinumBlonde</item>
+        <item>brown</item>
+        <item>lightBrown</item>
+        <item>blue</item>
+        <item>lightBlue</item>
+        <item>purple</item>
+        <item>lightPurple</item>
+        <item>pink</item>
+        <item>black</item>
+        <item>white</item>
+        <item>grey</item>
+        <item>silver</item>
+        <item>red</item>
+        <item>orange</item>
+        <item>green</item>
+        <item>gradient</item>
+        <item>multicolored</item>
+        <item>darkBlue</item>
+        <item>burgundy</item>
+        <item>darkGreen</item>
+    </string-array>
+
+
+    <string-array name="service_categories">
+        <item>Choose Service Category</item>
+        <item>Haircut</item>
+        <item>Shaving</item>
+        <item>Treatment</item>
+        <item>Styling</item>
+        <item>Additional</item>
+        <item>Others</item>
+    </string-array>
+
+
+
+</resources>

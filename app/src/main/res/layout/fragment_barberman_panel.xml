@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile"
+            android:background="#00FFFFFF" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileImageView"
+            android:layout_alignTop="@id/profileImageView"
+            android:text="Barber Name"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@color/fui_transparent" />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTextView"
+            android:layout_toEndOf="@id/profileImageView"
+            android:layout_marginTop="8dp"
+            android:text="Rating: 0.0/5 (0 customers)"
+            android:textColor="@color/white"
+            android:background="@color/fui_transparent"/>
+
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingTextView"
+            android:layout_toEndOf="@id/profileImageView"
+            android:layout_marginTop="8dp"
+            android:text="Phone Number"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:background="@color/fui_transparent"/>
+
+        <Button
+            android:id="@+id/saveBarberInfoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNumberTextView"
+            android:layout_marginTop="8dp"
+            android:text="Save"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/addServiceButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/profileImageView"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_add_services"
+            android:contentDescription="Add Services" />
+
+        <ImageView
+            android:id="@+id/buttonBackToBooking"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/addServiceButton"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_back_to_booking"
+            android:contentDescription="Back to Booking" />
+
+        <ImageView
+            android:id="@+id/buttonBackToProfile"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/buttonBackToBooking"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_back_to_profile"
+            android:contentDescription="Back to Profile" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/servicesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonBackToProfile"
+            android:layout_marginTop="16dp" />
+
+    </RelativeLayout>
+</layout>

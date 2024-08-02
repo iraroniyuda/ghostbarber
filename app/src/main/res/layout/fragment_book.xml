@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Data binding variables if any -->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background1">
+
+            <!-- Fixed Navigation Bar -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_navigation_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+                <ImageButton
+                    android:id="@+id/homeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/home"
+                    android:src="@drawable/ic_home"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintWidth_default="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/aiHairstyleButton"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/aiHairstyleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/ic_ai_hairstyle"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintWidth_default="spread"
+                    app:layout_constraintStart_toEndOf="@id/homeButton"
+                    app:layout_constraintEnd_toStartOf="@+id/reelsButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/reelsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/reels"
+                    android:src="@drawable/ic_reels"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintWidth_default="spread"
+                    app:layout_constraintStart_toEndOf="@id/aiHairstyleButton"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_booking"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/ic_booking"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/cart"
+                    android:src="@drawable/ic_booking"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintWidth_default="spread"
+                    app:layout_constraintStart_toEndOf="@id/reelsButton"
+                    app:layout_constraintEnd_toStartOf="@+id/profileButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/profile"
+                    android:src="@drawable/ic_profile"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintWidth_default="spread"
+                    app:layout_constraintStart_toEndOf="@id/ic_booking"
+                    app:layout_constraintEnd_toStartOf="@+id/moreButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/moreButton"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/more"
+                    android:src="@drawable/ic_more"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintWidth_default="spread"
+                    app:layout_constraintStart_toEndOf="@id/profileButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="4dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/backToHomeButton"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back_to_home"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_back"
+                    android:layout_marginEnd="16dp"/>
+
+                <ImageButton
+                    android:id="@+id/barbermanPanelButton"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_barberman_panel"
+                    android:contentDescription="@string/barberman_panel"
+                    android:background="?attr/selectableItemBackground"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bookingInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/bookingOrderIdTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Order ID"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bookingBarberNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barber Name" />
+
+                <TextView
+                    android:id="@+id/bookingTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Time" />
+
+                <TextView
+                    android:id="@+id/bookingTotalPriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price" />
+
+                <LinearLayout
+                    android:id="@+id/servicesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/servicesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Services"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/toggleServicesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show Services" />
+
+                    <LinearLayout
+                        android:id="@+id/servicesListContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/cancelOrderButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel Order"
+                    android:backgroundTint="#D50000" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/barberRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0.5dp"
+                android:layout_below="@id/bookingInfoLayout"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

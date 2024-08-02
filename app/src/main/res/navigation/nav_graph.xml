@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.gbdev.ghostbarber.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.gbdev.ghostbarber.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_hairstyleFragment"
+            app:destination="@id/hairstyleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_barbermanFragment"
+            app:destination="@id/barbermanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createPostFragment"
+            app:destination="@id/createPostFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hairstyleFragment"
+        android:name="com.gbdev.ghostbarber.ui.hairstyle.HairstyleFragment"
+        android:label="Hairstyle"
+        tools:layout="@layout/fragment_hairstyle">
+        <action
+            android:id="@+id/action_hairstyleFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_hairstyleFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_hairstyleFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.gbdev.ghostbarber.ui.book.BookFragment"
+        android:label="Book Service"
+        tools:layout="@layout/fragment_book">
+        <action
+            android:id="@+id/action_bookFragment_to_hairstyleFragment"
+            app:destination="@id/hairstyleFragment" />
+        <action
+            android:id="@+id/action_bookFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_bookFragment_to_barbermanPanelFragment"
+            app:destination="@id/barbermanPanelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.gbdev.ghostbarber.ui.message.MessageFragment"
+        android:label="Message"
+        tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/navigation_reels"
+        android:name="com.gbdev.ghostbarber.ui.reels.ReelsFragment"
+        android:label="Reels"
+        tools:layout="@layout/fragment_reels">
+        <action
+            android:id="@+id/action_reelsFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+        <action
+            android:id="@+id/action_reelsFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.gbdev.ghostbarber.ui.cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.gbdev.ghostbarber.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_barbermanPanelFragment"
+            app:destination="@id/barbermanPanelFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_barbermanFragment"
+            app:destination="@id/barbermanFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_sellerPanelFragment"
+            app:destination="@id/sellerPanelFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_hairstyleFragment"
+            app:destination="@id/hairstyleFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.gbdev.ghostbarber.ui.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/barbermanPanelFragment"
+        android:name="com.gbdev.ghostbarber.ui.barberman.BarbermanPanelFragment"
+        android:label="Barberman Panel"
+        tools:layout="@layout/fragment_barberman_panel" />
+
+    <fragment
+        android:id="@+id/barbermanFragment"
+        android:name="com.gbdev.ghostbarber.ui.barberman.BarbermanFragment"
+        android:label="Barberman"
+        tools:layout="@layout/fragment_barberman">
+        <action
+            android:id="@+id/action_barbermanFragment_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.gbdev.ghostbarber.ui.shop.ShopFragment"
+        android:label="Shop"
+        tools:layout="@layout/fragment_shop" />
+
+    <fragment
+        android:id="@+id/sellerPanelFragment"
+        android:name="com.gbdev.ghostbarber.ui.seller.SellerPanelFragment"
+        android:label="Seller Panel"
+        tools:layout="@layout/fragment_seller_panel" />
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.gbdev.ghostbarber.ui.more.MoreFragment"
+        android:label="More"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_moreFragment_to_hairstyleFragment"
+            app:destination="@id/hairstyleFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_userSettingFragment"
+            app:destination="@id/userSettingFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_academyFragment"
+            app:destination="@id/academyFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_tipsFragment"
+            app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_barbershopFragment"
+            app:destination="@id/barbershopFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userSettingFragment"
+        android:name="com.gbdev.ghostbarber.ui.usersetting.UserSettingFragment"
+        android:label="User Settings"
+        tools:layout="@layout/fragment_user_setting">
+        <action
+            android:id="@+id/action_userSettingFragment_to_barbermanPanelFragment"
+            app:destination="@id/barbermanPanelFragment" />
+        <action
+            android:id="@+id/action_userSettingFragment_to_barbermanFragment"
+            app:destination="@id/barbermanFragment" />
+        <action
+            android:id="@+id/action_userSettingFragment_to_sellerPanelFragment"
+            app:destination="@id/sellerPanelFragment" />
+        <action
+            android:id="@+id/action_userSettingFragment_to_hairstyleFragment"
+            app:destination="@id/hairstyleFragment" />
+        <action
+            android:id="@+id/action_userSettingFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_userSettingFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.gbdev.ghostbarber.ui.wallet.WalletFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_wallet">
+        <action
+            android:id="@+id/action_walletFragment_to_homeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="com.gbdev.ghostbarber.ui.createpost.CreatePostFragment"
+        android:label="Create Post"
+        tools:layout="@layout/fragment_create_post">
+        <action
+            android:id="@+id/action_createPostFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.gbdev.ghostbarber.ui.profile.CommentsFragment"
+        android:label="Comments"
+        tools:layout="@layout/fragment_comments">
+        <argument
+            android:name="postId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/academyFragment"
+        android:name="com.gbdev.ghostbarber.ui.academy.AcademyFragment"
+        android:label="Academy"
+        tools:layout="@layout/fragment_academy" />
+
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.gbdev.ghostbarber.ui.tips.TipsFragment"
+        android:label="Tips"
+        tools:layout="@layout/fragment_tips" />
+
+    <fragment
+        android:id="@+id/barbershopFragment"
+        android:name="com.gbdev.ghostbarber.ui.barbershop.BarbershopFragment"
+        android:label="Barbershop"
+        tools:layout="@layout/fragment_barbershop">
+        <action
+            android:id="@+id/action_barbershopFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+</navigation>

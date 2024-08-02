@@ -1,0 +1,320 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.hairstyle.HairstyleFragment">
+
+    <data>
+        <!-- Define any necessary data binding variables here -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1">
+
+        <!-- Fixed Navigation Bar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <!-- Navigation Buttons -->
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/home"
+                android:src="@drawable/ic_home"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/aiHairstyleButton"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="4dp"/>
+
+            <ImageButton
+                android:id="@+id/aiHairstyleButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/message"
+                android:src="@drawable/ic_ai_hairstyle"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintStart_toEndOf="@id/homeButton"
+                app:layout_constraintEnd_toStartOf="@+id/reelsButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <ImageButton
+                android:id="@+id/reelsButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/reels"
+                android:src="@drawable/ic_reels"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintStart_toEndOf="@id/aiHairstyleButton"
+                app:layout_constraintEnd_toStartOf="@+id/ic_booking"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <ImageButton
+                android:id="@+id/ic_booking"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/cart"
+                android:src="@drawable/ic_booking"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintStart_toEndOf="@id/reelsButton"
+                app:layout_constraintEnd_toStartOf="@+id/profileButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <ImageButton
+                android:id="@+id/profileButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/profile"
+                android:src="@drawable/ic_profile"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintStart_toEndOf="@id/ic_booking"
+                app:layout_constraintEnd_toStartOf="@+id/moreButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <ImageButton
+                android:id="@+id/moreButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/more"
+                android:src="@drawable/ic_more"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintStart_toEndOf="@id/profileButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="4dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Rest of your layout elements -->
+        <TextView
+            android:id="@+id/labelChangeYourHairstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_your_hairstyle"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/top_navigation_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="0dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/selectedHairstyleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/labelChangeYourHairstyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="0dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/hairstyleImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            app:layout_constraintTop_toBottomOf="@id/selectedHairstyleName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+            app:layout_constraintHeight_percent="0.4"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/selected_image"
+            android:background="@color/hint_text_color" />
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/hairstyleImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewHairstyles">
+
+            <ImageButton
+                android:id="@+id/selectImageButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_select_image"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/select_image"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+            <ImageButton
+                android:id="@+id/captureImageButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_capture_image"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/capture_image"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHairstyles"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/buttonContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/colorSpinner"
+            app:layout_constraintHeight_percent="0.3"/>
+
+        <Spinner
+            android:id="@+id/colorSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewHairstyles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/changeHairstyleButton" />
+
+        <ImageButton
+            android:id="@+id/changeHairstyleButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="0dp"
+            android:src="@drawable/ic_change_hairstyle"
+            android:background="@color/fui_transparent"
+            android:contentDescription="@string/change_hairstyle"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/colorSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonDownloadRemoveContainer" />
+
+        <LinearLayout
+            android:id="@+id/buttonDownloadRemoveContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/changeHairstyleButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/backToHomeButton">
+
+            <ImageButton
+                android:id="@+id/downloadImageButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_download_image"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/download_image"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+            <ImageButton
+                android:id="@+id/removeImageButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_remove_image"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/remove_image"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/backToHomeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/back_to_home"
+            android:textSize="8sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/buttonDownloadRemoveContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/processingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/processing_image"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/colorSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/changeHairstyleButton" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+            android:progressTint="@color/accent_color"
+            android:indeterminateTint="@color/primary_text_color"
+            app:layout_constraintTop_toBottomOf="@id/processingIndicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/changeHairstyleButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
